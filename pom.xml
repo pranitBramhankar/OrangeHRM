@@ -13,7 +13,7 @@
         <configuration>
           <suiteXmlFiles>
             <!-- This points to the testng.xml file mentioned in the sources -->
-            <suiteXmlFile>testng.xml</suiteXmlFile>
+            <suiteXmlFile>${testngxml}</suiteXmlFile>
           </suiteXmlFiles>
         </configuration>
       </plugin>
