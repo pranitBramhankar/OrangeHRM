@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="6" passed="6" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2026-05-24T00:11:29 IST" name="Suite" finished-at="2026-05-24T00:12:32 IST" duration-ms="63091">
+    <groups>
+    </groups>
+    <test started-at="2026-05-24T00:11:29 IST" name="EdgeTest" finished-at="2026-05-24T00:11:50 IST" duration-ms="20917">
+      <class name="TestCases.Test_LogInFunction">
+        <test-method is-config="true" signature="launchBrowser(java.lang.String)[pri:0, instance:TestCases.Test_LogInFunction@77f1baf5]" started-at="2026-05-24T00:11:29 IST" name="launchBrowser" finished-at="2026-05-24T00:11:35 IST" duration-ms="6449" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[edge]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchBrowser -->
+        <test-method signature="validLogIn()[pri:1, instance:TestCases.Test_LogInFunction@77f1baf5]" started-at="2026-05-24T00:11:35 IST" name="validLogIn" finished-at="2026-05-24T00:11:38 IST" duration-ms="2294" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validLogIn -->
+        <test-method is-config="true" signature="tearDownAllSessions()[pri:0, instance:TestCases.Test_LogInFunction@77f1baf5]" started-at="2026-05-24T00:11:38 IST" name="tearDownAllSessions" finished-at="2026-05-24T00:11:38 IST" duration-ms="154" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDownAllSessions -->
+        <test-method is-config="true" signature="launchBrowser(java.lang.String)[pri:0, instance:TestCases.Test_LogInFunction@77f1baf5]" started-at="2026-05-24T00:11:38 IST" name="launchBrowser" finished-at="2026-05-24T00:11:49 IST" duration-ms="10976" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[edge]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchBrowser -->
+        <test-method signature="InvalidUsername()[pri:2, instance:TestCases.Test_LogInFunction@77f1baf5]" started-at="2026-05-24T00:11:49 IST" name="InvalidUsername" finished-at="2026-05-24T00:11:50 IST" duration-ms="851" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- InvalidUsername -->
+        <test-method is-config="true" signature="tearDownAllSessions()[pri:0, instance:TestCases.Test_LogInFunction@77f1baf5]" started-at="2026-05-24T00:11:50 IST" name="tearDownAllSessions" finished-at="2026-05-24T00:11:50 IST" duration-ms="154" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDownAllSessions -->
+      </class> <!-- TestCases.Test_LogInFunction -->
+    </test> <!-- EdgeTest -->
+    <test started-at="2026-05-24T00:11:29 IST" name="ChromeTest" finished-at="2026-05-24T00:12:03 IST" duration-ms="34193">
+      <class name="TestCases.Test_LogInFunction">
+        <test-method is-config="true" signature="launchBrowser(java.lang.String)[pri:0, instance:TestCases.Test_LogInFunction@397fbdb]" started-at="2026-05-24T00:11:29 IST" name="launchBrowser" finished-at="2026-05-24T00:11:38 IST" duration-ms="9300" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchBrowser -->
+        <test-method signature="validLogIn()[pri:1, instance:TestCases.Test_LogInFunction@397fbdb]" started-at="2026-05-24T00:11:38 IST" name="validLogIn" finished-at="2026-05-24T00:11:41 IST" duration-ms="3240" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validLogIn -->
+        <test-method is-config="true" signature="tearDownAllSessions()[pri:0, instance:TestCases.Test_LogInFunction@397fbdb]" started-at="2026-05-24T00:11:41 IST" name="tearDownAllSessions" finished-at="2026-05-24T00:11:41 IST" duration-ms="121" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDownAllSessions -->
+        <test-method is-config="true" signature="launchBrowser(java.lang.String)[pri:0, instance:TestCases.Test_LogInFunction@397fbdb]" started-at="2026-05-24T00:11:41 IST" name="launchBrowser" finished-at="2026-05-24T00:12:02 IST" duration-ms="20648" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchBrowser -->
+        <test-method signature="InvalidUsername()[pri:2, instance:TestCases.Test_LogInFunction@397fbdb]" started-at="2026-05-24T00:12:02 IST" name="InvalidUsername" finished-at="2026-05-24T00:12:03 IST" duration-ms="622" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- InvalidUsername -->
+        <test-method is-config="true" signature="tearDownAllSessions()[pri:0, instance:TestCases.Test_LogInFunction@397fbdb]" started-at="2026-05-24T00:12:03 IST" name="tearDownAllSessions" finished-at="2026-05-24T00:12:03 IST" duration-ms="223" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDownAllSessions -->
+      </class> <!-- TestCases.Test_LogInFunction -->
+    </test> <!-- ChromeTest -->
+    <test started-at="2026-05-24T00:11:29 IST" name="FireFoxTest" finished-at="2026-05-24T00:12:32 IST" duration-ms="63091">
+      <class name="TestCases.Test_LogInFunction">
+        <test-method is-config="true" signature="launchBrowser(java.lang.String)[pri:0, instance:TestCases.Test_LogInFunction@6c40365c]" started-at="2026-05-24T00:11:29 IST" name="launchBrowser" finished-at="2026-05-24T00:12:12 IST" duration-ms="43667" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[firefox]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchBrowser -->
+        <test-method signature="validLogIn()[pri:1, instance:TestCases.Test_LogInFunction@6c40365c]" started-at="2026-05-24T00:12:12 IST" name="validLogIn" finished-at="2026-05-24T00:12:17 IST" duration-ms="4110" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validLogIn -->
+        <test-method is-config="true" signature="tearDownAllSessions()[pri:0, instance:TestCases.Test_LogInFunction@6c40365c]" started-at="2026-05-24T00:12:17 IST" name="tearDownAllSessions" finished-at="2026-05-24T00:12:17 IST" duration-ms="429" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDownAllSessions -->
+        <test-method is-config="true" signature="launchBrowser(java.lang.String)[pri:0, instance:TestCases.Test_LogInFunction@6c40365c]" started-at="2026-05-24T00:12:17 IST" name="launchBrowser" finished-at="2026-05-24T00:12:31 IST" duration-ms="13543" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[firefox]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchBrowser -->
+        <test-method signature="InvalidUsername()[pri:2, instance:TestCases.Test_LogInFunction@6c40365c]" started-at="2026-05-24T00:12:31 IST" name="InvalidUsername" finished-at="2026-05-24T00:12:31 IST" duration-ms="843" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- InvalidUsername -->
+        <test-method is-config="true" signature="tearDownAllSessions()[pri:0, instance:TestCases.Test_LogInFunction@6c40365c]" started-at="2026-05-24T00:12:31 IST" name="tearDownAllSessions" finished-at="2026-05-24T00:12:32 IST" duration-ms="464" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDownAllSessions -->
+      </class> <!-- TestCases.Test_LogInFunction -->
+    </test> <!-- FireFoxTest -->
+  </suite> <!-- Suite -->
+</testng-results>
