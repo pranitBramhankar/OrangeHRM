@@ -203,6 +203,9 @@
 &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
 &lt;!DOCTYPE suite SYSTEM &quot;https://testng.org/testng-1.0.dtd&quot;&gt;
 &lt;suite parallel=&quot;tests&quot; name=&quot;Suite&quot; guice-stage=&quot;DEVELOPMENT&quot;&gt;
+  &lt;listeners&gt;
+    &lt;listener class-name=&quot;Utilities.ExtentReportManager1&quot;/&gt;
+  &lt;/listeners&gt;
   &lt;test thread-count=&quot;5&quot; parallel=&quot;tests&quot; name=&quot;ChromeTest&quot;&gt;
     &lt;parameter name=&quot;browser&quot; value=&quot;chrome&quot;/&gt;
     &lt;classes&gt;
@@ -268,27 +271,27 @@ data.addRows(6);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'validLogIn')
 data.setCell(0, 2, 'TestCases.Test_LogInFunction')
-data.setCell(0, 3, 4110);
+data.setCell(0, 3, 3977);
 data.setCell(1, 0, 1)
 data.setCell(1, 1, 'validLogIn')
 data.setCell(1, 2, 'TestCases.Test_LogInFunction')
-data.setCell(1, 3, 3240);
+data.setCell(1, 3, 3876);
 data.setCell(2, 0, 2)
 data.setCell(2, 1, 'validLogIn')
 data.setCell(2, 2, 'TestCases.Test_LogInFunction')
-data.setCell(2, 3, 2294);
+data.setCell(2, 3, 3369);
 data.setCell(3, 0, 3)
 data.setCell(3, 1, 'InvalidUsername')
 data.setCell(3, 2, 'TestCases.Test_LogInFunction')
-data.setCell(3, 3, 851);
+data.setCell(3, 3, 1843);
 data.setCell(4, 0, 4)
 data.setCell(4, 1, 'InvalidUsername')
 data.setCell(4, 2, 'TestCases.Test_LogInFunction')
-data.setCell(4, 3, 843);
+data.setCell(4, 3, 1115);
 data.setCell(5, 0, 5)
 data.setCell(5, 1, 'InvalidUsername')
 data.setCell(5, 2, 'TestCases.Test_LogInFunction')
-data.setCell(5, 3, 622);
+data.setCell(5, 3, 883);
 window.suiteTableData['Suite']= { tableData: data, tableDiv: 'times-div-Suite'}
 return data;
 }
@@ -321,76 +324,76 @@ return data;
             <div class="chronological-class">
               <div class="chronological-class-name">TestCases.Test_LogInFunction</div> <!-- chronological-class-name -->
               <div class="configuration-method before">
-                <span class="method-name">launchBrowser(chrome)</span>
-                <span class="method-start">0 ms</span>
-              </div> <!-- configuration-method before -->
-              <div class="configuration-method before">
-                <span class="method-name">launchBrowser(edge)</span>
-                <span class="method-start">0 ms</span>
-              </div> <!-- configuration-method before -->
-              <div class="configuration-method before">
                 <span class="method-name">launchBrowser(firefox)</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-method before -->
+              <div class="configuration-method before">
+                <span class="method-name">launchBrowser(chrome)</span>
+                <span class="method-start">2 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="configuration-method before">
+                <span class="method-name">launchBrowser(edge)</span>
+                <span class="method-start">2 ms</span>
+              </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">validLogIn</span>
-                <span class="method-start">6450 ms</span>
+                <span class="method-start">17516 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDownAllSessions</span>
-                <span class="method-start">8747 ms</span>
+                <span class="method-start">21522 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">launchBrowser(edge)</span>
-                <span class="method-start">8903 ms</span>
+                <span class="method-start">21874 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">validLogIn</span>
-                <span class="method-start">9300 ms</span>
+                <span class="method-start">31226 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDownAllSessions</span>
-                <span class="method-start">12542 ms</span>
-              </div> <!-- configuration-method after -->
-              <div class="configuration-method before">
-                <span class="method-name">launchBrowser(chrome)</span>
-                <span class="method-start">12664 ms</span>
-              </div> <!-- configuration-method before -->
-              <div class="test-method">
-                <span class="method-name">InvalidUsername</span>
-                <span class="method-start">19879 ms</span>
-              </div> <!-- test-method -->
-              <div class="configuration-method after">
-                <span class="method-name">tearDownAllSessions</span>
-                <span class="method-start">20731 ms</span>
-              </div> <!-- configuration-method after -->
-              <div class="test-method">
-                <span class="method-name">InvalidUsername</span>
-                <span class="method-start">33312 ms</span>
-              </div> <!-- test-method -->
-              <div class="configuration-method after">
-                <span class="method-name">tearDownAllSessions</span>
-                <span class="method-start">33938 ms</span>
-              </div> <!-- configuration-method after -->
-              <div class="test-method">
-                <span class="method-name">validLogIn</span>
-                <span class="method-start">43667 ms</span>
-              </div> <!-- test-method -->
-              <div class="configuration-method after">
-                <span class="method-name">tearDownAllSessions</span>
-                <span class="method-start">47779 ms</span>
+                <span class="method-start">35107 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">launchBrowser(firefox)</span>
-                <span class="method-start">48209 ms</span>
+                <span class="method-start">36574 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
-                <span class="method-name">InvalidUsername</span>
-                <span class="method-start">61752 ms</span>
+                <span class="method-name">validLogIn</span>
+                <span class="method-start">40368 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDownAllSessions</span>
-                <span class="method-start">62595 ms</span>
+                <span class="method-start">43747 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">launchBrowser(chrome)</span>
+                <span class="method-start">44067 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">InvalidUsername</span>
+                <span class="method-start">51624 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">tearDownAllSessions</span>
+                <span class="method-start">53470 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="test-method">
+                <span class="method-name">InvalidUsername</span>
+                <span class="method-start">57100 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">tearDownAllSessions</span>
+                <span class="method-start">58220 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="test-method">
+                <span class="method-name">InvalidUsername</span>
+                <span class="method-start">72576 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">tearDownAllSessions</span>
+                <span class="method-start">73462 ms</span>
               </div> <!-- configuration-method after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

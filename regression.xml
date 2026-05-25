@@ -5,7 +5,7 @@
   <test thread-count="5" name="ChromeTest">
   <parameter name="browser" value="chrome"></parameter>
   <classes>
-  	<class name="TestCases.SampleTest"></class>
+  	<class name="TestCases.SampleTest"/>
   </classes>
   </test> <!-- Test -->
   <test thread-count="5" name="EdgeTest">
@@ -17,7 +17,7 @@
   <test thread-count="5" name="FireFoxTest">
   	<parameter name="browser" value="firefox"></parameter>
   	<classes>
-  		<class name="TestCases.SampleTest"></class>
+  		<class name="TestCases.Test_LogInFunction"></class>
   	</classes>
   </test>
 </suite> <!-- Suite -->
