@@ -3,13 +3,13 @@ package Utilities;
 import java.awt.Desktop;
 import java.io.File;
 import java.io.IOException;
-
-//Extent report 5.x...//version
-
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.List;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+import org.openqa.selenium.WebDriver;
 import org.testng.ITestContext;
 import org.testng.ITestListener;
 import org.testng.ITestResult;
@@ -23,117 +23,137 @@ import com.aventstack.extentreports.reporter.configuration.Theme;
 import TestBase.BaseTest;
 
 public class ExtentReportManager1 implements ITestListener {
-	public ExtentSparkReporter sparkReporter;
-	public ExtentReports extent;
-	public ExtentTest test;
 
-	String repName;
+	private static final Logger logger = LogManager.getLogger(ExtentReportManager1.class);
 
+	private ExtentSparkReporter sparkReporter;
+	private ExtentReports extent;
+
+	private static ThreadLocal<ExtentTest> extentTest = new ThreadLocal<>();
+
+	private String repName;
+
+	public WebDriver driver;
+
+	@Override
 	public void onStart(ITestContext testContext) {
-		
-		/*SimpleDateFormat df=new SimpleDateFormat("yyyy.MM.dd.HH.mm.ss");
-		Date dt=new Date();
-		String currentdatetimestamp=df.format(dt);
-		*/
-		
-		String timeStamp = new SimpleDateFormat("yyyy.MM.dd.HH.mm.ss").format(new Date());// time stamp
+
+		String timeStamp = new SimpleDateFormat("yyyy.MM.dd.HH.mm.ss").format(new Date());
+
 		repName = "Test-Report-" + timeStamp + ".html";
-		sparkReporter = new ExtentSparkReporter(".\\reports\\" + repName);// specify location of the report
 
-		sparkReporter.config().setDocumentTitle("orangHRM Automation Report"); // Title of report
-		sparkReporter.config().setReportName("orangeHRM Functional Testing"); // name of the report
+		sparkReporter = new ExtentSparkReporter("./reports/" + repName);
+
+		sparkReporter.config().setDocumentTitle("OrangeHRM Automation Report");
+
+		sparkReporter.config().setReportName("OrangeHRM Functional Testing");
+
 		sparkReporter.config().setTheme(Theme.DARK);
-		
+
 		extent = new ExtentReports();
+
 		extent.attachReporter(sparkReporter);
-		extent.setSystemInfo("Application", "opencart");
-		extent.setSystemInfo("Module", "Admin");
-		extent.setSystemInfo("Sub Module", "Customers");
-		extent.setSystemInfo("User Name", System.getProperty("user.name"));
-		extent.setSystemInfo("Environemnt", "QA");
-		
+
+		extent.setSystemInfo("Application", "OrangeHRM");
+		extent.setSystemInfo("Environment", "QA");
+		extent.setSystemInfo("User", System.getProperty("user.name"));
+
 		String os = testContext.getCurrentXmlTest().getParameter("os");
-		extent.setSystemInfo("Operating System", os);
-		
+
+		if (os != null) {
+			extent.setSystemInfo("Operating System", os);
+		}
+
 		String browser = testContext.getCurrentXmlTest().getParameter("browser");
-		extent.setSystemInfo("Browser", browser);
-		
+
+		if (browser != null) {
+			extent.setSystemInfo("Browser", browser);
+		}
+
 		List<String> includedGroups = testContext.getCurrentXmlTest().getIncludedGroups();
-		if(!includedGroups.isEmpty()) {
-		extent.setSystemInfo("Groups", includedGroups.toString());
+
+		if (!includedGroups.isEmpty()) {
+			extent.setSystemInfo("Groups", includedGroups.toString());
 		}
+
+		logger.info("Extent Report Initialized : {}", repName);
 	}
 
+	@Override
+	public void onTestStart(ITestResult result) {
+
+		ExtentTest test = extent.createTest(result.getMethod().getMethodName());
+
+		test.assignCategory(result.getMethod().getGroups());
+
+		extentTest.set(test);
+
+		logger.info("\n==================== START TEST : {} ====================", result.getMethod().getMethodName());
+	}
+
+	@Override
 	public void onTestSuccess(ITestResult result) {
-	
-		test = extent.createTest(result.getTestClass().getName());
-		test.assignCategory(result.getMethod().getGroups()); // to display groups in report
-		test.log(Status.PASS,result.getName()+" got successfully executed");
-		
+
+		extentTest.get().log(Status.PASS, result.getMethod().getMethodName() + " executed successfully");
+
+		logger.info("TEST PASSED : {}", result.getMethod().getMethodName());
+
+		logger.info("==========================================================\n");
 	}
 
+	@Override
 	public void onTestFailure(ITestResult result) {
-		test = extent.createTest(result.getTestClass().getName());
-		test.assignCategory(result.getMethod().getGroups());
-		
-		test.log(Status.FAIL,result.getName()+" got failed");
-		test.log(Status.INFO, result.getThrowable().getMessage());
-		
-		try {
-			String imgPath = new BaseTest().captureScreen(result.getName());
-			test.addScreenCaptureFromPath(imgPath);
-			
-		} catch (IOException e1) {
-			e1.printStackTrace();
-		}
-	}
 
-	public void onTestSkipped(ITestResult result) {
-		test = extent.createTest(result.getTestClass().getName());
-		test.assignCategory(result.getMethod().getGroups());
-		test.log(Status.SKIP, result.getName()+" got skipped");
-		test.log(Status.INFO, result.getThrowable().getMessage());
-	}
+		WebDriver driver = (WebDriver) result.getTestContext().getAttribute("driver");
 
-	public void onFinish(ITestContext testContext) {
-		
-		extent.flush();
-		
-		String pathOfExtentReport = System.getProperty("user.dir")+"\\reports\\"+repName;
-		File extentReport = new File(pathOfExtentReport);
-		
+		extentTest.get().log(Status.FAIL, result.getMethod().getMethodName() + " failed");
+
+		extentTest.get().log(Status.INFO, result.getThrowable());
+
 		try {
-			Desktop.getDesktop().browse(extentReport.toURI());
+
+			String imgPath = new BaseTest().captureScreen(result.getMethod().getMethodName(), driver);
+
+			extentTest.get().addScreenCaptureFromPath(imgPath);
+
 		} catch (IOException e) {
-			e.printStackTrace();
+
+			logger.error("Failed to attach screenshot", e);
 		}
 
-		
-		/*  try {
-			  URL url = new  URL("file:///"+System.getProperty("user.dir")+"\\reports\\"+repName);
-		  
-		  // Create the email message 
-		  ImageHtmlEmail email = new ImageHtmlEmail();
-		  email.setDataSourceResolver(new DataSourceUrlResolver(url));
-		  email.setHostName("smtp.googlemail.com"); 
-		  email.setSmtpPort(465);
-		  email.setAuthenticator(new DefaultAuthenticator("pavanoltraining@gmail.com","password")); 
-		  email.setSSLOnConnect(true);
-		  email.setFrom("pavanoltraining@gmail.com"); //Sender
-		  email.setSubject("Test Results");
-		  email.setMsg("Please find Attached Report....");
-		  email.addTo("pavankumar.busyqa@gmail.com"); //Receiver 
-		  email.attach(url, "extent report", "please check report..."); 
-		  email.send(); // send the email 
-		  }
-		  catch(Exception e) 
-		  { 
-			  e.printStackTrace(); 
-			  }
-		 */ 
-		//
-		//a
-		 
+		logger.error("TEST FAILED : {}", result.getMethod().getMethodName(), result.getThrowable());
+
+		logger.info("==========================================================\n");
 	}
 
+	@Override
+	public void onTestSkipped(ITestResult result) {
+
+		extentTest.get().log(Status.SKIP, result.getMethod().getMethodName() + " skipped");
+
+		logger.warn("TEST SKIPPED : {}", result.getMethod().getMethodName());
+
+		logger.info("==========================================================\n");
+	}
+
+	@Override
+	public void onFinish(ITestContext testContext) {
+
+		extent.flush();
+
+		logger.info("Extent Report Generated Successfully");
+
+		String reportPath = System.getProperty("user.dir") + "/reports/" + repName;
+
+		File reportFile = new File(reportPath);
+
+		try {
+
+			Desktop.getDesktop().browse(reportFile.toURI());
+
+		} catch (IOException e) {
+
+			logger.error("Unable to open extent report", e);
+		}
+	}
 }

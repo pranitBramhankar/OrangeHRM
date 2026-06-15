@@ -1,0 +1,6 @@
+{
+	"VerifyLogInInvalid":
+	{
+        "invalidCredentialMessage": "Invalid credential"
+	}
+}
