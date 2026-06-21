@@ -61,7 +61,7 @@ public class TestActionHelper {
 					logger.warn("Element not found for typing: " + Locator);
 				}
 				textBox.sendKeys(text);
-				logger.info("Successfully entered text into element: " + Locator);
+				logger.info("Successfully entered text into element: "+"text= "+text+" locator="+ Locator);
 				
 				ReportManager.info(text + " entered into : " + elementName);
 				
@@ -86,7 +86,7 @@ public class TestActionHelper {
 				}
 				String text = messageLocator.getText();
 				if (text != null) {
-					logger.info("Successfully get text from element: " + Locator);
+					logger.info("Successfully get text from element: "+"Text = " +text +" Locator = "+ Locator);
 				}
 				ReportManager.info("Retrieved text: '" + text + "' from element: " + elementName);
 				return text;

@@ -1,0 +1,52 @@
+2026-06-21 23:48:20 INFO  [TestNG-tests-1] [ReportManager:58] - ====================================================
+2026-06-21 23:48:20 INFO  [TestNG-tests-1] [ReportManager:59] - Extent Report Initialized : ExtentReport_20260621_234820.html
+2026-06-21 23:48:20 INFO  [TestNG-tests-1] [ReportManager:60] - ====================================================
+2026-06-21 23:48:24 INFO  [TestNG-tests-1] [VerifyLogInInvalid:64] - Logging initialized for VerifyLogInInvalid
+2026-06-21 23:48:24 INFO  [TestNG-tests-1] [ReportManager:70] - 
+2026-06-21 23:48:24 INFO  [TestNG-tests-1] [ReportManager:71] - ====================================================
+2026-06-21 23:48:24 INFO  [TestNG-tests-1] [ReportManager:72] - START TEST : verifyInvalidPassword
+2026-06-21 23:48:24 INFO  [TestNG-tests-1] [ReportManager:73] - ====================================================
+2026-06-21 23:48:24 INFO  [TestNG-tests-1] [TestActionHelper:55] - Attempting to enter text into element: By.xpath: //input[@name='username'] with text: A
+2026-06-21 23:48:25 INFO  [TestNG-tests-1] [TestActionHelper:59] - Element found for typing: By.xpath: //input[@name='username']
+2026-06-21 23:48:25 INFO  [TestNG-tests-1] [TestActionHelper:64] - Successfully entered text into element: ABy.xpath: //input[@name='username']
+2026-06-21 23:48:25 INFO  [TestNG-tests-1] [TestRetryMechanism:28] - Operation succeeded on attempt 1
+2026-06-21 23:48:25 INFO  [TestNG-tests-1] [TestActionHelper:55] - Attempting to enter text into element: By.cssSelector: input[type='password'] with text: Admin
+2026-06-21 23:48:25 INFO  [TestNG-tests-1] [TestActionHelper:59] - Element found for typing: By.cssSelector: input[type='password']
+2026-06-21 23:48:25 INFO  [TestNG-tests-1] [TestActionHelper:64] - Successfully entered text into element: AdminBy.cssSelector: input[type='password']
+2026-06-21 23:48:25 INFO  [TestNG-tests-1] [TestRetryMechanism:28] - Operation succeeded on attempt 1
+2026-06-21 23:48:25 INFO  [TestNG-tests-1] [TestActionHelper:34] - Element found for clicking: By.xpath: //button[text()=' Login ']
+2026-06-21 23:48:25 INFO  [TestNG-tests-1] [TestActionHelper:39] - Successfully clicked element: By.xpath: //button[text()=' Login ']
+2026-06-21 23:48:25 INFO  [TestNG-tests-1] [TestRetryMechanism:73] - Operation succeeded on attempt 1
+2026-06-21 23:48:25 INFO  [TestNG-tests-1] [TestActionHelper:79] - Attempting to get text from element: By.xpath: //p[text()='Invalid credentials']
+2026-06-21 23:48:26 INFO  [TestNG-tests-1] [TestActionHelper:83] - Element is visible to get messagge: By.xpath: //p[text()='Invalid credentials']
+2026-06-21 23:48:26 INFO  [TestNG-tests-1] [TestActionHelper:89] - Successfully get text from element: Invalid credentials By.xpath: //p[text()='Invalid credentials']
+2026-06-21 23:48:26 INFO  [TestNG-tests-1] [TestRetryMechanism:28] - Operation succeeded on attempt 1
+2026-06-21 23:48:26 INFO  [TestNG-tests-1] [ReportManager:81] - TEST PASSED : verifyInvalidPassword
+2026-06-21 23:48:26 INFO  [TestNG-tests-1] [ReportManager:91] - Screenshot attached : C:\Users\prani\eclipse-workspace\OrangeHRM\screenshots\verifyInvalidPassword_20260621114826.png
+2026-06-21 23:48:26 INFO  [TestNG-tests-1] [ReportManager:100] - ====================================================
+2026-06-21 23:48:31 INFO  [TestNG-tests-1] [VerifyLogInInvalid2:64] - Logging initialized for VerifyLogInInvalid2
+2026-06-21 23:48:31 INFO  [TestNG-tests-1] [ReportManager:70] - 
+2026-06-21 23:48:31 INFO  [TestNG-tests-1] [ReportManager:71] - ====================================================
+2026-06-21 23:48:31 INFO  [TestNG-tests-1] [ReportManager:72] - START TEST : verifyInvalidPassword
+2026-06-21 23:48:31 INFO  [TestNG-tests-1] [ReportManager:73] - ====================================================
+2026-06-21 23:48:31 INFO  [TestNG-tests-1] [TestActionHelper:55] - Attempting to enter text into element: By.xpath: //input[@name='username'] with text: A
+2026-06-21 23:48:31 INFO  [TestNG-tests-1] [TestActionHelper:59] - Element found for typing: By.xpath: //input[@name='username']
+2026-06-21 23:48:31 INFO  [TestNG-tests-1] [TestActionHelper:64] - Successfully entered text into element: ABy.xpath: //input[@name='username']
+2026-06-21 23:48:31 INFO  [TestNG-tests-1] [TestRetryMechanism:28] - Operation succeeded on attempt 1
+2026-06-21 23:48:31 INFO  [TestNG-tests-1] [TestActionHelper:55] - Attempting to enter text into element: By.cssSelector: input[type='password'] with text: Admin
+2026-06-21 23:48:31 INFO  [TestNG-tests-1] [TestActionHelper:59] - Element found for typing: By.cssSelector: input[type='password']
+2026-06-21 23:48:31 INFO  [TestNG-tests-1] [TestActionHelper:64] - Successfully entered text into element: AdminBy.cssSelector: input[type='password']
+2026-06-21 23:48:31 INFO  [TestNG-tests-1] [TestRetryMechanism:28] - Operation succeeded on attempt 1
+2026-06-21 23:48:31 INFO  [TestNG-tests-1] [TestActionHelper:34] - Element found for clicking: By.xpath: //button[text()=' Login ']
+2026-06-21 23:48:31 INFO  [TestNG-tests-1] [TestActionHelper:39] - Successfully clicked element: By.xpath: //button[text()=' Login ']
+2026-06-21 23:48:31 INFO  [TestNG-tests-1] [TestRetryMechanism:73] - Operation succeeded on attempt 1
+2026-06-21 23:48:31 INFO  [TestNG-tests-1] [TestActionHelper:79] - Attempting to get text from element: By.xpath: //p[text()='Invalid credentials']
+2026-06-21 23:48:32 INFO  [TestNG-tests-1] [TestActionHelper:83] - Element is visible to get messagge: By.xpath: //p[text()='Invalid credentials']
+2026-06-21 23:48:32 INFO  [TestNG-tests-1] [TestActionHelper:89] - Successfully get text from element: Invalid credentials By.xpath: //p[text()='Invalid credentials']
+2026-06-21 23:48:32 INFO  [TestNG-tests-1] [TestRetryMechanism:28] - Operation succeeded on attempt 1
+2026-06-21 23:48:32 INFO  [TestNG-tests-1] [ReportManager:81] - TEST PASSED : verifyInvalidPassword
+2026-06-21 23:48:32 INFO  [TestNG-tests-1] [ReportManager:91] - Screenshot attached : C:\Users\prani\eclipse-workspace\OrangeHRM\screenshots\verifyInvalidPassword_20260621114832.png
+2026-06-21 23:48:32 INFO  [TestNG-tests-1] [ReportManager:100] - ====================================================
+2026-06-21 23:48:33 INFO  [TestNG-tests-1] [ReportManager:156] - Extent Report Generated Successfully
+2026-06-21 23:48:33 INFO  [TestNG-tests-1] [ReportManager:157] - Report Name : ExtentReport_20260621_234820.html
+2026-06-21 23:48:34 INFO  [TestNG-tests-1] [ReportManager:169] - Report opened successfully.

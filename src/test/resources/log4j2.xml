@@ -4,7 +4,7 @@
 	<Properties>
 
 		<Property name="log-path">
-			C:\Users\prani\git\OrangeHRM\logs
+			C:\Users\prani\eclipse-workspace\OrangeHRM\logs
 		</Property>
 
 		<Property name="log-pattern">
