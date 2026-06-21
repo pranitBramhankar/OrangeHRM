@@ -39,4 +39,6 @@ public class TestLogInPage {
     public void clickLoginButton() {
         actionHelper.click(loginButton);
     }
+    
+    
 }

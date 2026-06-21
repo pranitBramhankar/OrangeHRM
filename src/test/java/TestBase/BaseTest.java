@@ -69,7 +69,7 @@ public class BaseTest {
 		return driver;
 	}
 	
-	public String captureScreen(String tname, WebDriver driver) throws IOException {
+	public String captureScreen(String tname) throws IOException {
 
 		String timeStamp = new SimpleDateFormat("yyyyMMddhhmmss").format(new Date());
 				

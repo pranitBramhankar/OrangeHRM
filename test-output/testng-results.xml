@@ -1,9 +1,63 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="0" passed="0" failed="0" skipped="0">
+<testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2026-06-16T02:53:52 IST" name="SuiteOnlyChrome" finished-at="2026-06-16T02:53:52 IST" duration-ms="0">
+  <suite started-at="2026-06-21T19:12:26 IST" name="SuiteOnlyChrome" finished-at="2026-06-21T19:13:37 IST" duration-ms="71128">
     <groups>
     </groups>
+    <test started-at="2026-06-21T19:12:26 IST" name="ChromeTest" finished-at="2026-06-21T19:13:37 IST" duration-ms="71128">
+      <class name="TestCases.VerifyLogInInvalid2">
+        <test-method is-config="true" signature="launchBrowser(java.lang.String,org.testng.ITestContext)[pri:0, instance:TestCases.VerifyLogInInvalid2@3d2ee678]" started-at="2026-06-21T19:12:57 IST" name="launchBrowser" finished-at="2026-06-21T19:12:59 IST" duration-ms="2220" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[org.testng.TestRunner@3b0c9195]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchBrowser -->
+        <test-method signature="verifyInvalidPassword()[pri:0, instance:TestCases.VerifyLogInInvalid2@3d2ee678]" started-at="2026-06-21T19:12:59 IST" name="verifyInvalidPassword" finished-at="2026-06-21T19:13:37 IST" duration-ms="37323" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyInvalidPassword -->
+        <test-method is-config="true" signature="tearDownAllSessions()[pri:0, instance:TestCases.VerifyLogInInvalid2@3d2ee678]" started-at="2026-06-21T19:13:37 IST" name="tearDownAllSessions" finished-at="2026-06-21T19:13:37 IST" duration-ms="213" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDownAllSessions -->
+      </class> <!-- TestCases.VerifyLogInInvalid2 -->
+      <class name="TestCases.VerifyLogInInvalid">
+        <test-method is-config="true" signature="launchBrowser(java.lang.String,org.testng.ITestContext)[pri:0, instance:TestCases.VerifyLogInInvalid@2df6226d]" started-at="2026-06-21T19:12:26 IST" name="launchBrowser" finished-at="2026-06-21T19:12:51 IST" duration-ms="24988" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[org.testng.TestRunner@3b0c9195]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchBrowser -->
+        <test-method signature="verifyInvalidPassword()[pri:0, instance:TestCases.VerifyLogInInvalid@2df6226d]" started-at="2026-06-21T19:12:51 IST" name="verifyInvalidPassword" finished-at="2026-06-21T19:12:57 IST" duration-ms="5488" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyInvalidPassword -->
+        <test-method is-config="true" signature="tearDownAllSessions()[pri:0, instance:TestCases.VerifyLogInInvalid@2df6226d]" started-at="2026-06-21T19:12:57 IST" name="tearDownAllSessions" finished-at="2026-06-21T19:12:57 IST" duration-ms="264" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDownAllSessions -->
+      </class> <!-- TestCases.VerifyLogInInvalid -->
+    </test> <!-- ChromeTest -->
   </suite> <!-- SuiteOnlyChrome -->
 </testng-results>

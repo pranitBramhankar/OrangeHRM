@@ -30,18 +30,18 @@ public class LogInPageFinal {
 	//Actions
 	
 	public void enterUsername(String username) {
-		actionHelper.typeIntoTextBox(usernameTextboxLocator, username);
+		actionHelper.typeIntoTextBox(usernameTextboxLocator, username, "Username Textbox");
 	}
 	
 	public void enterPassword(String password) {
-		actionHelper.typeIntoTextBox(passwordTextboxLocator, password);
+		actionHelper.typeIntoTextBox(passwordTextboxLocator, password, "Password Textbox");
 	}
 	
 	public void clickLogInButton() {
-		actionHelper.click(logInBtn);		
+		actionHelper.click(logInBtn,"Log In Button");		
 	}
 	
 	public String getInvalidUsernameMessage() {
-		return actionHelper.getMessageTest(InvalidUsernameMessageLocator);
+		return actionHelper.getMessageTest(InvalidUsernameMessageLocator, "Invalid Credential Message");
 	}
 }
