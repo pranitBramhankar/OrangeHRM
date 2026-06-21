@@ -45,7 +45,7 @@ public class BaseTest {
 		
 		//Set Properties file
 		try {
-			FileReader file = new FileReader("C:\\Users\\prani\\eclipse-workspace\\OrangeHRM\\src\\test\\resources\\commonValues.properties");
+			FileReader file = new FileReader("C:\\Users\\prani\\git\\OrangeHRM\\src\\test\\resources\\commonValues.properties");
 			properties = new Properties();
 			properties.load(file);
 		} catch(Exception e) {

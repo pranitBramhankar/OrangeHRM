@@ -2,12 +2,12 @@
 <testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2026-06-21T19:12:26 IST" name="SuiteOnlyChrome" finished-at="2026-06-21T19:13:37 IST" duration-ms="71128">
+  <suite started-at="2026-06-21T23:20:42 IST" name="SuiteOnlyChrome" finished-at="2026-06-21T23:20:56 IST" duration-ms="14812">
     <groups>
     </groups>
-    <test started-at="2026-06-21T19:12:26 IST" name="ChromeTest" finished-at="2026-06-21T19:13:37 IST" duration-ms="71128">
+    <test started-at="2026-06-21T23:20:42 IST" name="ChromeTest" finished-at="2026-06-21T23:20:56 IST" duration-ms="14812">
       <class name="TestCases.VerifyLogInInvalid2">
-        <test-method is-config="true" signature="launchBrowser(java.lang.String,org.testng.ITestContext)[pri:0, instance:TestCases.VerifyLogInInvalid2@3d2ee678]" started-at="2026-06-21T19:12:57 IST" name="launchBrowser" finished-at="2026-06-21T19:12:59 IST" duration-ms="2220" status="PASS">
+        <test-method is-config="true" signature="launchBrowser(java.lang.String,org.testng.ITestContext)[pri:0, instance:TestCases.VerifyLogInInvalid2@3d2ee678]" started-at="2026-06-21T23:20:51 IST" name="launchBrowser" finished-at="2026-06-21T23:20:53 IST" duration-ms="1759" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -23,17 +23,17 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- launchBrowser -->
-        <test-method signature="verifyInvalidPassword()[pri:0, instance:TestCases.VerifyLogInInvalid2@3d2ee678]" started-at="2026-06-21T19:12:59 IST" name="verifyInvalidPassword" finished-at="2026-06-21T19:13:37 IST" duration-ms="37323" status="PASS">
+        <test-method signature="verifyInvalidPassword()[pri:0, instance:TestCases.VerifyLogInInvalid2@3d2ee678]" started-at="2026-06-21T23:20:53 IST" name="verifyInvalidPassword" finished-at="2026-06-21T23:20:56 IST" duration-ms="3632" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyInvalidPassword -->
-        <test-method is-config="true" signature="tearDownAllSessions()[pri:0, instance:TestCases.VerifyLogInInvalid2@3d2ee678]" started-at="2026-06-21T19:13:37 IST" name="tearDownAllSessions" finished-at="2026-06-21T19:13:37 IST" duration-ms="213" status="PASS">
+        <test-method is-config="true" signature="tearDownAllSessions()[pri:0, instance:TestCases.VerifyLogInInvalid2@3d2ee678]" started-at="2026-06-21T23:20:56 IST" name="tearDownAllSessions" finished-at="2026-06-21T23:20:56 IST" duration-ms="157" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownAllSessions -->
       </class> <!-- TestCases.VerifyLogInInvalid2 -->
       <class name="TestCases.VerifyLogInInvalid">
-        <test-method is-config="true" signature="launchBrowser(java.lang.String,org.testng.ITestContext)[pri:0, instance:TestCases.VerifyLogInInvalid@2df6226d]" started-at="2026-06-21T19:12:26 IST" name="launchBrowser" finished-at="2026-06-21T19:12:51 IST" duration-ms="24988" status="PASS">
+        <test-method is-config="true" signature="launchBrowser(java.lang.String,org.testng.ITestContext)[pri:0, instance:TestCases.VerifyLogInInvalid@2df6226d]" started-at="2026-06-21T23:20:42 IST" name="launchBrowser" finished-at="2026-06-21T23:20:46 IST" duration-ms="3715" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -49,11 +49,11 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- launchBrowser -->
-        <test-method signature="verifyInvalidPassword()[pri:0, instance:TestCases.VerifyLogInInvalid@2df6226d]" started-at="2026-06-21T19:12:51 IST" name="verifyInvalidPassword" finished-at="2026-06-21T19:12:57 IST" duration-ms="5488" status="PASS">
+        <test-method signature="verifyInvalidPassword()[pri:0, instance:TestCases.VerifyLogInInvalid@2df6226d]" started-at="2026-06-21T23:20:46 IST" name="verifyInvalidPassword" finished-at="2026-06-21T23:20:50 IST" duration-ms="4925" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyInvalidPassword -->
-        <test-method is-config="true" signature="tearDownAllSessions()[pri:0, instance:TestCases.VerifyLogInInvalid@2df6226d]" started-at="2026-06-21T19:12:57 IST" name="tearDownAllSessions" finished-at="2026-06-21T19:12:57 IST" duration-ms="264" status="PASS">
+        <test-method is-config="true" signature="tearDownAllSessions()[pri:0, instance:TestCases.VerifyLogInInvalid@2df6226d]" started-at="2026-06-21T23:20:51 IST" name="tearDownAllSessions" finished-at="2026-06-21T23:20:51 IST" duration-ms="154" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownAllSessions -->

@@ -7,6 +7,13 @@
   <test thread-count="5" parallel="tests" name="ChromeTest(failed)">
     <parameter name="browser" value="chrome"/>
     <classes>
+      <class name="TestCases.VerifyLogInInvalid">
+        <methods>
+          <include name="launchBrowser"/>
+          <include name="tearDownAllSessions"/>
+          <include name="verifyInvalidPassword"/>
+        </methods>
+      </class> <!-- TestCases.VerifyLogInInvalid -->
       <class name="TestCases.VerifyLogInInvalid2">
         <methods>
           <include name="verifyInvalidPassword"/>
@@ -14,13 +21,6 @@
           <include name="launchBrowser"/>
         </methods>
       </class> <!-- TestCases.VerifyLogInInvalid2 -->
-      <class name="TestCases.VerifyLogInInvalid">
-        <methods>
-          <include name="tearDownAllSessions"/>
-          <include name="launchBrowser"/>
-          <include name="verifyInvalidPassword"/>
-        </methods>
-      </class> <!-- TestCases.VerifyLogInInvalid -->
     </classes>
   </test> <!-- ChromeTest(failed) -->
 </suite> <!-- Failed suite [SuiteOnlyChrome] -->
